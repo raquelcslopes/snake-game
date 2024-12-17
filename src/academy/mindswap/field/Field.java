@@ -17,6 +17,7 @@ public final class Field {
     private static final String FRUIT_STRING = "\uF8FF";
     private static final String DEAD_SNAKE = " GAME OVER ";
     private static final String OBSTACLE = "☢";
+    private static final String PAUSE = "PAUSE";
 
     private static int width;
     private static int height;
@@ -39,6 +40,7 @@ public final class Field {
         screenWriter = new ScreenWriter(screen);
         screen.setCursorPosition(null);
         screen.startScreen();
+        pauseGame();
 
         drawWalls();
         screen.refresh();
@@ -95,6 +97,16 @@ public final class Field {
 
     public static void drawObstacle (Obstacle obstacle) {
         screen.putString(obstacle.getPosition().getCol(), obstacle.getPosition().getRow(), OBSTACLE, Terminal.Color.YELLOW, null);
+    }
+
+    public static void pauseGame () {
+        Key p = readInput();
+
+        if(p != null) {
+            if (p.getKind() == Key.Kind.Enter) {
+                screen.putString(24, 12, PAUSE, Terminal.Color.BLUE, null);
+            }
+        }
     }
 
     public static int getWidth() {
