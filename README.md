@@ -1,47 +1,35 @@
 # Snake Game Skeleton
 
-Este projeto é um esqueleto para um jogo da cobrinha (Snake) em Java, utilizando a biblioteca Lanterna para interface de terminal.
+This project is a basic skeleton for a Snake game implemented in Java. It uses the Lanterna library for terminal-based graphics.
 
-## Estrutura do Projeto
+## Features
+- Terminal-based interface using Lanterna
+- Snake movement and growth
+- Fruit spawning and collection
+- Game over and pause functionality
+- Obstacles (optional, depending on implementation)
 
-- `src/academy/mindswap/` - Código principal do jogo.
-  - `Game.java` - Lógica principal do jogo.
-  - `Main.java` - Classe de entrada (main).
-  - `field/` - Componentes do campo de jogo.
-    - `Field.java` - Representação do campo.
-    - `Obstacle.java` - Obstáculos no campo.
-    - `Position.java` - Posições no campo.
-  - `gameobjects/` - Objetos do jogo.
-    - `fruit/`
-      - `Fruit.java` - Frutas que a cobra pode comer.
-    - `snake/`
-      - `Direction.java` - Direções possíveis da cobra.
-      - `Snake.java` - Lógica da cobra.
+## Requirements
+- Java 8 or higher
+- Lanterna library (already included in the project dependencies)
 
-## Dependências
+## How to Run
+1. Clone this repository or download the source code.
+2. Open the project in your preferred Java IDE (e.g., IntelliJ IDEA, Eclipse).
+3. Build the project.
+4. Run the `Main.java` file located at `src/academy/mindswap/Main.java`.
 
-- [Lanterna 2.1.7](https://github.com/mabe02/lanterna) (já incluída na configuração do projeto)
+## Controls
+- Use the arrow keys to control the snake's direction.
+- Press `P` to pause or resume the game.
+- The game ends if the snake collides with itself, the border, or an obstacle.
 
-## Como executar
+## Project Structure
+- `academy.mindswap.field` - Field and obstacle logic
+- `academy.mindswap.gameobjects.snake` - Snake logic and direction
+- `academy.mindswap.gameobjects.fruit` - Fruit logic
+- `academy.mindswap` - Main game loop and entry point
 
-1. Certifique-se de ter o JDK instalado (Java 8 ou superior).
-2. Compile o projeto:
-   ```sh
-   javac -d out src/academy/mindswap/**/*.java
-   ```
-3. Execute o jogo:
-   ```sh
-   java -cp out:lanterna-2.1.7.jar academy.mindswap.Main
-   ```
-   > Ajuste o caminho do JAR do Lanterna conforme necessário.
-
-## Objetivo
-
-O objetivo do jogo é controlar a cobra, comer frutas e evitar colidir com obstáculos ou com o próprio corpo.
-
-## Notas
-
-- Este projeto é um ponto de partida e pode ser expandido com novas funcionalidades, como placar, níveis, ou diferentes tipos de frutas.
-- Sinta-se à vontade para modificar e melhorar o código!
-
+## License
+This project is provided as-is for educational purposes.
 
